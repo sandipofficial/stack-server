@@ -8,6 +8,7 @@ export const AskQuestion = async (req, res) => {
   try {
     const quesationAsked = await postQuestion.save();
     res.status(200).json({
+      message: "ques",
       postQuestion: quesationAsked,
     });
   } catch (error) {
