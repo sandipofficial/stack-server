@@ -17,7 +17,9 @@ app.use(cors());
 // app.use('/',(req, res) => {
 //     res.send("This is a stack overflow clone API")
 // })
-
+app.use("/", (req,res) => {
+  res.json({message: "hello from sandip"})
+})
 app.use("/user", userRoutes);
 app.use("/questions", questionRoutes);
 app.use("/answer", answerRoutes);
